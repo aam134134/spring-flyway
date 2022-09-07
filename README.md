@@ -1,7 +1,8 @@
 # Project Overview
 Spring Boot App with Flyway DB Impl; Includes Testcontainers tests to exercise scripts against actual Postgres instance
 
-Requires Docker Desktop to be installed on the host build machine/CICD image
+# Requirements
+Requires Docker Desktop to be installed on the host build machine/CICD image to support testers.
 
 # Testing
 Run: gradle test
