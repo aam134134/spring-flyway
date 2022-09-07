@@ -15,10 +15,10 @@ import org.testcontainers.containers.PostgreSQLContainer;
 class SpringFlywayApplicationTestsWithAnnotations {
 
     @ClassRule
-    public static PostgreSQLContainer<JDBCServerContainer> sqlServerContainer = JDBCServerContainer.getInstance();
+    public static PostgreSQLContainer<DBContainer> dbContainer = DBContainer.getInstance();
 
     static {
-        sqlServerContainer.start();
+        dbContainer.start();
     }
 
     @Test

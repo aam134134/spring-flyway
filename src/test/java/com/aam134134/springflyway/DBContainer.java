@@ -2,17 +2,17 @@ package com.aam134134.springflyway;
 
 import org.testcontainers.containers.PostgreSQLContainer;
 
-public class JDBCServerContainer extends PostgreSQLContainer<JDBCServerContainer> {
+public class DBContainer extends PostgreSQLContainer<DBContainer> {
     private static final String IMAGE_VERSION = "postgres:14.5";
-    private static JDBCServerContainer container;
+    private static DBContainer container;
 
-    private JDBCServerContainer() {
+    private DBContainer() {
         super(IMAGE_VERSION);
     }
 
-    public static JDBCServerContainer getInstance() {
+    public static DBContainer getInstance() {
         if (container == null) {
-            container = new JDBCServerContainer();
+            container = new DBContainer();
         }
 
         return container;
